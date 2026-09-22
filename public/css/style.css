@@ -1,0 +1,140 @@
+:root {
+  --fundo: #f3f5f7;
+  --cartao: #ffffff;
+  --texto: #1c2733;
+  --suave: #5b6b7a;
+  --borda: #d5dce3;
+  --acento: #1f5fbf;
+  --acento-escuro: #174a96;
+  --erro: #b42318;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #12181f;
+    --cartao: #1b2530;
+    --texto: #e6ecf2;
+    --suave: #9aabbb;
+    --borda: #2d3b49;
+    --acento: #5b9bf0;
+    --acento-escuro: #7cb0f5;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.5;
+}
+
+.cartao {
+  width: 100%;
+  max-width: 26rem;
+  padding: 2rem;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.modo,
+.dica {
+  color: var(--suave);
+  font-size: 0.875rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: var(--fundo);
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: var(--acento);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--acento-escuro);
+}
+
+button.secundario {
+  margin-top: 0.5rem;
+  background: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 2px;
+}
+
+pre {
+  margin: 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--borda);
+  margin: 1.5rem 0 0;
+}
+
+#mensagem {
+  min-height: 1.5rem;
+  color: var(--erro);
+}
+
+code {
+  font-size: 0.85em;
+}
